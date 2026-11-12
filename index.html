@@ -18,6 +18,21 @@
   <body>
     
     <div id="root"></div>
+
+    <script>
+  window.addEventListener('DOMContentLoaded', () => {
+    if (window.location.hash === '#menu') {
+      setTimeout(() => {
+        const menuSection = id => document.getElementById(id) || document.querySelector(id);
+        // Looks for an element with id="menu" or scrolls down to the seasonal favorites section
+        const target = document.getElementById('menu') || document.querySelector('section'); 
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 500);
+    }
+  });
+</script>
     
   </body>
 </html>
